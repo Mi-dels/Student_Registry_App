@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Students Details</title>
   </head>
-  <link rel="stylesheet" href="{% static 'file.css' %}" />
-  <body>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <body class="details">
     <h1>Students Details</h1>
+    <div class="profile-card">
+      <h2>{{student.firstname}} {{student.lastname}}</h2>
+      <p><span class="detail">Email: {{student.email}}</span></p>
+      <p><span class="detail">Age: {{student.age}}</span></p>
+      <p><span class="detail">Gender: {{student.gender}}</span></p>
+      <p><span class="detail">Department:{{student.department}}</span></p>
 
-    <h2>{{student.firstname}} {{student.lastname}}</h2>
-    <p><strong>Email: </strong>{{student.email}}</p>
-    <p><strong>Age:</strong> {{student.age}}</p>
-    <p><strong>Gender: </strong>{{student.gender}}</p>
-    <p><strong>Department:</strong>{{student.department}}</p>
-
-    <a href="{%url 'studentslist'%}">Back To The List</a>
+      <a href="{%url 'studentslist'%}" class="Detail">Back To The List</a>
+    </div>
   </body>
 </html>
