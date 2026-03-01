@@ -1,0 +1,30 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Records</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <body>
+    <h1>Student Registry</h1>
+
+    <ul class="studentsitems">
+      {% for Student in mystudents %}
+      <li class="studentslist">
+        <a href="{%url 'studentsdetails' Student.id %}" class="studentlink"
+          >{{Student.firstname}} {{Student.lastname}}
+        </a>
+      </li>
+      {% empty %}
+      <li>No students available. Add new students</li>
+
+      {% endfor %}
+    </ul>
+
+    <a href="/admin/students/students/add/" class="btn_admin"
+      >Add New Students</a
+    >
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Details</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'file.css' %}" />
+  <body>
+    <h1>Students Details</h1>
+
+    <h2>{{student.firstname}} {{student.lastname}}</h2>
+    <p><strong>Email: </strong>{{student.email}}</p>
+    <p><strong>Age:</strong> {{student.age}}</p>
+    <p><strong>Gender: </strong>{{student.gender}}</p>
+    <p><strong>Department:</strong>{{student.department}}</p>
+
+    <a href="{%url 'studentslist'%}">Back To The List</a>
+  </body>
+</html>
