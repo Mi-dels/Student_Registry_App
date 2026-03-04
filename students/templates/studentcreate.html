@@ -1,14 +1,37 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Students</title>
   </head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
   <body>
     <div class="form-container">
       <form method="post">
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %}
+        <p>
+          <label for="{{form.firstname.id_for_label}}">FirstName</label>
+          {{form.firstname}}
+        </p>
+        <p>
+          <label for="{{form.lastname.id_for_label}}">LastName</label>
+          {{form.lastname}}
+        </p>
+
+        <p>
+          <label for="{{form.email.id_for_label}}">Email</label> {{form.email}}
+        </p>
+        <p><label for="{{form.age.id_for_label}}">Age</label> {{form.age}}</p>
+        <p>
+          <label for="{{form.gender.id_for_label}}">Gender</label>
+          {{form.gender}}
+        </p>
+        <p>
+          <label for="{{form.department.id_for_label}}">Department</label>
+          {{form.department}}
+        </p>
         <button>Save</button>
       </form>
     </div>

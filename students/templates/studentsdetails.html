@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{% static 'style.css' %}" />
   <body class="details">
     <h1>Students Details</h1>
-    <div class="profile-card">
+    <div class="profile_card">
       <h2>{{student.firstname}} {{student.lastname}}</h2>
       <p><span class="detail">Email: {{student.email}}</span></p>
       <p><span class="detail">Age: {{student.age}}</span></p>
@@ -17,9 +17,7 @@
       <p><span class="detail">Department:{{student.department}}</span></p>
 
       <a href="{%url 'studentslist'%}" class="Detail">Back To The List</a>
-
-      <a href="{%url 'student_update' student.id%}">Update</a>
-
+      <a href="{%url 'student_update' student.id%} ">Update</a>
       <a href="{%url 'student_delete' student.id%}">Delete</a>
     </div>
   </body>

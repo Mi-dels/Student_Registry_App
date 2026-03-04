@@ -58,7 +58,7 @@ h1 {
   text-shadow: 0 1px 3px whitesmoke;
 }
 .profile-card {
-  background-color: rgba(255, 248, 220, 0.192);
+  background-color: rgba(192, 207, 104, 0.192);
   padding: 40px;
 
   border-radius: 12px;
@@ -87,4 +87,12 @@ h1 {
 }
 .h1 {
   margin-bottom: 90px;
+}
+
+/* forms styling */
+
+label {
+  font-weight: bold;
+  font-size: larger;
+  color: blue;
 }

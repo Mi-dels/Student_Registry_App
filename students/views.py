@@ -48,7 +48,7 @@ def student_update(request, id):
       return redirect('studentslist') 
     
   else:
-    form = StudentForm(instance=Student)
+    form = StudentForm(instance=Stu_dent)
 
     return render(request, "studentcreate.html", {"form" : form})
 
