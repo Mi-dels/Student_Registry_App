@@ -40,9 +40,9 @@ def students_create(request):
 
 
 def student_update(request, id):
-  Student = get_object_or_404(Students, id=id)
+  Stu_dent = get_object_or_404(Students, id=id)
   if request.method == "POST":
-    form = StudentForm(request.POST, instance=Student)
+    form = StudentForm(request.POST, instance=Stu_dent)
     if form.is_valid():
       form.save()
       return redirect('studentslist') 
