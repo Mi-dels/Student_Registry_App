@@ -11,28 +11,75 @@
     <div class="form-container">
       <form method="post">
         {% csrf_token %}
-        <p>
-          <label for="{{form.firstname.id_for_label}}">FirstName</label>
-          {{form.firstname}}
-        </p>
-        <p>
-          <label for="{{form.lastname.id_for_label}}">LastName</label>
-          {{form.lastname}}
-        </p>
+        <div class="formgroup">
+          <label for="{{form.firstname.id_for_label}}" class="label"
+            >FirstName</label
+          >
+          <input
+            type="text"
+            name="{{form.firstname.name}}"
+            id="{{form.firstname.id_for_label}}"
+            placeholder="John"
+          />
+        </div>
+        <div class="formgroup">
+          <label for="{{form.lastname.id_for_label}}" class="label"
+            >LastName</label
+          >
+          <input
+            type="text"
+            name="{{form.lastname.name}}"
+            id="{{form.lastname.id_for_label}}"
+            placeholder="Doe"
+          />
+        </div>
 
-        <p>
-          <label for="{{form.email.id_for_label}}">Email</label> {{form.email}}
-        </p>
-        <p><label for="{{form.age.id_for_label}}">Age</label> {{form.age}}</p>
-        <p>
-          <label for="{{form.gender.id_for_label}}">Gender</label>
-          {{form.gender}}
-        </p>
-        <p>
-          <label for="{{form.department.id_for_label}}">Department</label>
-          {{form.department}}
-        </p>
-        <button>Save</button>
+        <div class="formgroup">
+          <label for="{{form.email.id_for_label}}" class="label">Email</label>
+          <input
+            type="email"
+            name="{{form.email.name}}"
+            id="{{form.email.id_for_label}}"
+            placeholder="johndoe@gmail.com"
+          />
+        </div>
+        <div class="formgroup">
+          <label for="{{form.age.id_for_label}}" class="label">Age</label>
+          <input
+            type="number"
+            name=" {{form.age.age}}"
+            id="{{form.age.id_for_label}}"
+            placeholder="0"
+          />
+        </div>
+        <div class="formgroup">
+          <label for="{{form.gender.id_for_label}}" class="label">Gender</label>
+          <select name="{{form.gender.name}}" id="{{form.gender.id_for_label}}">
+            {%for value, label in form.gender.field.choices%}
+            <option
+              value="{{value}}"
+              {%if
+              form.gender.value=""
+              ="value%}selected{%"
+              endif%}
+            >
+              {{label}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="formgroup">
+          <label for="{{form.department.id_for_label}}" class="label"
+            >Department</label
+          >
+          <input
+            type="text"
+            name="{{form.department.name}}"
+            id="{{form.department.id_for_label}}"
+            placeholder="Frontend Developer"
+          />
+        </div>
+        <button type="submt" class="btn">Save Students</button>
       </form>
     </div>
   </body>

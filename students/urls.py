@@ -1,12 +1,12 @@
-from django.urls import path
-from .views import   studentslist, studentsdetails, students_create, student_update,student_delete
+from django.urls import path,include
+from rest_framework import routers
+from . import views
+
+
+router = routers.DefaultRouter()
+router.register(r"students", views.StudentViewSet) 
 
 urlpatterns = [
-
-   
-    path('', studentslist, name='studentslist'),
-    path('Student/<int:id>/', studentsdetails, name='studentsdetails' ),
-    path('addstudent/', students_create, name='students_create'),
-    path('update/<int:id>/', student_update, name='student_update'),
-    path('delete/<int:id>/', student_delete, name='student_delete')
+path('', include(router.urls)),
+path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

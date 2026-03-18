@@ -3,66 +3,68 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Students
 from .forms import  StudentForm
-# def students(request):
-#   template = loader.get_template('studentsdetails.html')
-#   return HttpResponse(template.render())
+from .models import Students
+from rest_framework import permissions, viewsets
+from .serializers import  StudentSerializer
 
 
-# def home(request):
-#   return HttpResponse('Welcome To The Home Page')
-
-
-
-
-def studentslist(request):  
-  mystudents = Students.objects.all().values()
-  return render(request,'studentslist.html', {'mystudents': mystudents})
-
-
-def studentsdetails(request, id ):
-    student = get_object_or_404(Students, id=id)
-    return render(request, 'studentsdetails.html', {'student': student})
+class StudentViewSet(viewsets.ModelViewSet):
+  queryset = Students.objects.all().order_by("-created_at")
+  serializer_class = StudentSerializer
+  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 
-def students_create(request):
-  if request.method == "POST":
-    form = StudentForm(request.POST)
-    if form.is_valid():
-      form.save()
-      return redirect('studentslist') 
+
+# def studentslist(request):  
+#   mystudents = Students.objects.all().values()
+#   return render(request,'studentslist.html', {'mystudents': mystudents})
+
+
+# def studentsdetails(request, id ):
+#     student = get_object_or_404(Students, id=id)
+#     return render(request, 'studentsdetails.html', {'student': student})
+
+
+
+# def students_create(request):
+#   if request.method == "POST":
+#     form = StudentForm(request.POST)
+#     if form.is_valid():
+#       form.save()
+#       return redirect('studentslist') 
   
-  else:
-    form = StudentForm()
+#   else:
+#     form = StudentForm()
 
-    return render(request, "studentcreate.html", {"form" : form})
+#     return render(request, "studentcreate.html", {"form" : form})
   
 
 
-def student_update(request, id):
-  Stu_dent = get_object_or_404(Students, id=id)
-  if request.method == "POST":
-    form = StudentForm(request.POST, instance=Stu_dent)
-    if form.is_valid():
-      form.save()
-      return redirect('studentslist') 
+# def student_update(request, id):
+#   Stu_dent = get_object_or_404(Students, id=id)
+#   if request.method == "POST":
+#     form = StudentForm(request.POST, instance=Stu_dent)
+#     if form.is_valid():
+#       form.save()
+#       return redirect('studentslist') 
     
-  else:
-    form = StudentForm(instance=Stu_dent)
+#   else:
+#     form = StudentForm(instance=Stu_dent)
 
-    return render(request, "studentcreate.html", {"form" : form})
+#     return render(request, "studentcreate.html", {"form" : form})
 
 
 
-def student_delete(request, id):
-  students = get_object_or_404(Students, id=id)
-  students.delete()
-  return redirect('studentslist')
+# def student_delete(request, id):
+#   students = get_object_or_404(Students, id=id)
+#   students.delete()
+#   return redirect('studentslist')
 
-    
-   
-   
     
    
+   
+    
+   
 
-# Create your views here.
+
