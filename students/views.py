@@ -4,14 +4,25 @@ from django.template import loader
 from .models import Students
 from .forms import  StudentForm
 from .models import Students
-from rest_framework import permissions, viewsets
+from rest_framework import permissions, viewsets, filters
 from .serializers import  StudentSerializer
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 
 class StudentViewSet(viewsets.ModelViewSet):
-  queryset = Students.objects.all().order_by("-created_at")
+  queryset = Students.objects.all()
   serializer_class = StudentSerializer
-  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+  permission_classes = [permissions.AllowAny]
+
+  filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+  filterset_fields = ['gender','department']
+  search_fields = ['firstname', 'lastname', 'email']
+  ordering_fields = ['age', 'created_at']
+  ordering = ['-created_at']
+
+
+
 
 
 
