@@ -1,0 +1,264 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2026-03-01T09:18:32.237Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "science biochemistry",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2026-03-01T09:19:57.855Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Mideo Jacobs",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2026-03-01T22:09:54.463Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "joy robinson",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2026-04-09T12:31:31.753Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "mid",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2026-04-09T12:31:31.753Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "mide",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2026-04-09T12:31:31.753Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "ola",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2026-04-09T12:31:31.753Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "5",
+      "object_repr": "olamis",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$WHwWqDXll8tFMGx5JPLr4V$7skGCVZFIurYuwFvcyQdAjmZqyYpodtFEPRX3N5GoRU=",
+      "last_login": "2026-04-09T12:12:30.461Z",
+      "is_superuser": true,
+      "username": "midels",
+      "first_name": "",
+      "last_name": "",
+      "email": "ogunjobmide35@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-03-01T04:20:26.907Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$0j4FPx1A5T5SIPUtzkarmO$Xjwxb0+KXn/tsjwfqkyZKDsb/82FuYBWRd2F9FuZkgM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mide",
+      "first_name": "",
+      "last_name": "",
+      "email": "lamyogunjobi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-04-10T22:04:19.128Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "1acjytrusnm5zeiysbiyqvlrtw3twyig",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-rmNKes5g2bsLDiBHipMKcXcSKQW0M_PeW6S8LjWtnec0kjgLLU6_rGR8ctsFPXK7TxKntsxjkXsiD9vldSJ-XY7276DmXre1cRwBglPFIA4BlN9IAMtEzqLxdvDREqGyLhrDOQBoF_zNaKWwoBWfL7V4Nq4:1w2bkh:lF3QZibNMzduMeDBXjApeRcdIg7FnpGYc0c4tTl9Lc4",
+      "expire_date": "2026-03-31T21:14:59.797Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "frwi38li0op61sx20qtigjso35atuo8x",
+    "fields": {
+      "session_data": ".eJxVjMEOwiAQRP-FsyFLaSl49O43kF1YpGogKe3J-O9K0oPeJvPezEt43Lfs98arX6I4CyVOvx1heHDpIN6x3KoMtWzrQrIr8qBNXmvk5-Vw_w4yttzXzlJSZFxkGhhJJ9TGqpGdcpyIE0SIUxjQWpzGpOcZtP5GABfABiPeHxFxOGY:1vwYMC:hQo9GAqJTmlLmMMK-sAQF9cdOohpppiAk2NRXX1oib4",
+      "expire_date": "2026-03-15T04:24:40.918Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vyhstzhue6leecfbsptpgiqxkhxyw5eo",
+    "fields": {
+      "session_data": ".eJyNkMFugzAQRP9lzxECDIZw7D3fYC32BtwQOzJ2qyjKv3chNBW33uyZt55ZPwC19slF9UXBni0ZRVe0E3QuTdPh7U5-sA66B6SZgrpdoAMJB1jZbVRjtJ4ZuKIzGH24MzDbwaUbdDEkOkAgYwPpqFJ4J-zibqN39HtZZnFSl28Mw8zZT5YiRlpq8GGgRYS1mervSnuzWpyNL3rkIhOZVzrf1553tYX8g9y6_ZFs6RQCuch77qDFss5GywWNQvaLpqnbupWyzURbtnkhGFGY4qjWT7QcBwXstB71hdximE90g8-0dzHYPluQbHPn7MSrTh8bu3tgxHnk6bKio5RNlfel1m0j85qVRgoyphK6rEVbH4UxOhfVsSwJGymLqqnPZZHnutcCnj8jKbdF:1wBJxk:v4JMgf8ogdlhXDVdiS26f5I-OcXOY-tlqYhIyJfK-mE",
+      "expire_date": "2026-04-24T22:04:28.803Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 1,
+    "fields": {
+      "firstname": "Mideo",
+      "lastname": "Jacobs",
+      "age": 18,
+      "email": "lamyogunjobi85@gmail.com",
+      "gender": "female",
+      "department": null,
+      "created_at": "2026-03-03T23:08:48.591Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 2,
+    "fields": {
+      "firstname": "joy",
+      "lastname": "robinson",
+      "age": 20,
+      "email": "lamyogunjobi@gmail.com",
+      "gender": "female",
+      "department": null,
+      "created_at": "2026-03-03T23:08:48.591Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 3,
+    "fields": {
+      "firstname": "Mide",
+      "lastname": "robinson",
+      "age": 18,
+      "email": "lamyogunjobi@gmail.com",
+      "gender": "female",
+      "department": "science",
+      "created_at": "2026-03-04T06:19:18.474Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 4,
+    "fields": {
+      "firstname": "Mide",
+      "lastname": "Jacobs",
+      "age": 18,
+      "email": "lamyogunjobi@gmail.com",
+      "gender": "female",
+      "department": "science",
+      "created_at": "2026-03-04T06:20:31.040Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 5,
+    "fields": {
+      "firstname": "Mideo",
+      "lastname": "robinson",
+      "age": 18,
+      "email": "lamyogunjobi85@gmail.com",
+      "gender": "F",
+      "department": "computer science",
+      "created_at": "2026-03-17T21:19:36.299Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 6,
+    "fields": {
+      "firstname": "Olamide",
+      "lastname": "Ogunjobi",
+      "age": 21,
+      "email": "lamyogunjobi@gmail.com",
+      "gender": "F",
+      "department": "Backend Developer",
+      "created_at": "2026-03-18T10:32:30.711Z"
+    }
+  },
+  {
+    "model": "students.students",
+    "pk": 7,
+    "fields": {
+      "firstname": "Olamide",
+      "lastname": "Ogunjobi",
+      "age": 21,
+      "email": "lamyogunjobi@gmail.com",
+      "gender": "F",
+      "department": "Backend Developer",
+      "created_at": "2026-03-18T10:32:43.808Z"
+    }
+  },
+  {
+    "model": "students.userprofile",
+    "pk": 5,
+    "fields": { "user": 6, "phone_number": "08135678045", "bio": "a developer" }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "example.com", "name": "example.com" }
+  },
+  {
+    "model": "account.emailaddress",
+    "pk": 5,
+    "fields": {
+      "user": 6,
+      "email": "lamyogunjobi@gmail.com",
+      "verified": false,
+      "primary": true
+    }
+  }
+]

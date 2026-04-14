@@ -7,19 +7,31 @@ from .models import Students
 from rest_framework import permissions, viewsets, filters
 from .serializers import  StudentSerializer
 from django_filters.rest_framework import DjangoFilterBackend
+from django.contrib.auth.models import User
+from rest_framework.response import Response
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth.models import User
+from students.models import Students 
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.exceptions import TokenError, InvalidToken
 
 
 
-class StudentViewSet(viewsets.ModelViewSet):
-  queryset = Students.objects.all()
-  serializer_class = StudentSerializer
-  permission_classes = [permissions.AllowAny]
 
-  filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-  filterset_fields = ['gender','department']
-  search_fields = ['firstname', 'lastname', 'email']
-  ordering_fields = ['age', 'created_at']
-  ordering = ['-created_at']
+
+
+# class StudentViewSet(viewsets.ModelViewSet):
+#   queryset = Students.objects.all()
+#   serializer_class = StudentSerializer
+#   permission_classes = [permissions.AllowAny]
+
+#   filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+#   filterset_fields = ['gender','department']
+#   search_fields = ['firstname', 'lastname', 'email']
+#   ordering_fields = ['age', 'created_at']
+#   ordering = ['-created_at']
 
 
 
@@ -71,6 +83,47 @@ class StudentViewSet(viewsets.ModelViewSet):
 #   students = get_object_or_404(Students, id=id)
 #   students.delete()
 #   return redirect('studentslist')
+
+# class SignupViewSet(viewsets.ModelViewSet):
+#   queryset = Signup.objects.all()
+#   serializer_class = SignupSerializer
+
+
+# @api_view(['GET'])
+# def Home(request):
+#   return Response("hello world")
+
+
+# @api_view(['GET'])
+# @permission_classes([IsAuthenticated])
+# def myprotectedroute(request):
+#   return Response('You have been granted permission to my protected route')
+
+
+
+# class MyTokenObtainPairView(TokenObtainPairView):
+#     serializer_class = TokenObtainPairSerializer
+
+#     def post(self, request, *args, **kwargs):
+
+#         # Proceed with the parent method to handle token generation
+#         try:
+#             response = super().post(request, *args, **kwargs)
+#         except TokenError as e:
+#             raise InvalidToken(e.args[0])
+
+#         # get username from form submission
+#         username = request.data.get('username')
+#         if username:
+#             # Add user details to the response
+
+#             user = Signup.objects.get(username=username)
+#             user_serializer =  SignupSerializer(user) 
+
+#             response.data['user'] = user_serializer.data
+
+#         return response
+
 
     
    
